@@ -13,7 +13,7 @@ class AdminScope implements Scope
     public function apply(Builder $builder, Model $model)
     {
         $type=User_type::where('role','=',Sd::$adminRole)->first();
-        $builder->where('type_id','=',$type->id);
+        $builder->where('type_id','=',$type->id)->id;
     }
 
 }
